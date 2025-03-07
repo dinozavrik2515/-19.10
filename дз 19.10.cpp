@@ -6,8 +6,8 @@ class Human
     //в этом классе представлены поля и методы, характерные для всех людей
 public:
 
-    Human(){}
-    ~Human(){}
+    Human() {}
+    ~Human() {}
 
     void SetAge(int age) { age_ = age; };
     int GetAge()const { return age_; };
@@ -18,7 +18,7 @@ public:
 
     void Talk()
     {
-        std::cout << "blablabla";
+        std::cout << "blablabla" << "\n";
     }
 
 private:
@@ -40,12 +40,12 @@ public:
 
     void OpenTheDoor()
     {
-        std::cout << "Door is open";
+        std::cout << "Door is open" << "\n";
     };
-    
+
     void CloseTheDoor()
     {
-        std::cout << "Door is close";
+        std::cout << "Door is close" << "\n";
     };
 
 private:
@@ -57,7 +57,7 @@ class TheMain : public Human
     //в этом классе представлен метод, который доступен только для упраляющего дома
 public:
     //
-    void TheTest() { std::cout << "проведён опрос среди жиетелей"; }
+    void TheTest() { std::cout << "проведён опрос среди жиетелей" << "\n"; }
 };
 
 int main()
@@ -66,7 +66,11 @@ int main()
     Vladislave.Talk();
 
     Zhitel ZhivoiVladislave;
-    ZhivoiVladislave.Talk(); 
+    ZhivoiVladislave.Talk();
     ZhivoiVladislave.OpenTheDoor();
+
+    TheMain KrytoiVladislave;
+    KrytoiVladislave.Talk();
+    KrytoiVladislave.TheTest();
 }
 
